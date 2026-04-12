@@ -86,7 +86,7 @@ python3 /ABSOLUTE/PATH/TO/PARENT/FOLDER/weather/mcp_logger.py \
 
 ## 依赖安装
 
-项目依赖见 `requirement.txt`，请先安装。
+项目依赖见 `requirements.txt`，请先安装。
 
 ### 1) 安装 uv
 
