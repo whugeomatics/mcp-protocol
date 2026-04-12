@@ -1,4 +1,4 @@
-# MCP Host 与 MCP Server 协议交互学习项目
+# MCP Host 与 MCP Server 交互协议流程
 
 ## 项目介绍
 
