@@ -22,11 +22,11 @@
 ## 项目结构
 
 ```text
-weather/
+mcp-protocol/
 ├── weather.py         # MCP weather server，提供天气查询工具
 ├── mcp_logger.py      # MCP 通信中转与日志记录代理
 ├── mcp_traffic.log    # 运行后生成/追加的通信日志
-├── requirement.txt    # 依赖列表
+└── requirement.txt    # 依赖列表
 ```
 
 ---
