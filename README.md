@@ -1,4 +1,4 @@
-# MCP Weather Demo（MCP Host 与 MCP Server 交互学习项目）
+# MCP Host 与 MCP Server 协议交互学习项目
 
 ## 项目介绍
 
