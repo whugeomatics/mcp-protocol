@@ -27,8 +27,6 @@ weather/
 ├── mcp_logger.py      # MCP 通信中转与日志记录代理
 ├── mcp_traffic.log    # 运行后生成/追加的通信日志
 ├── requirement.txt    # 依赖列表
-├── pyproject.toml
-└── uv.lock
 ```
 
 ---
