@@ -30,6 +30,7 @@ sequenceDiagram
     L->>S: 转notifications/initialized通知
 ```
 > mcp_traffic.log 13-25行
+
 ![初始化](./.images/init.png)
 
 ### 2. 工具和能力发现阶段
@@ -61,6 +62,7 @@ sequenceDiagram
     L->>H: {"jsonrpc":"2.0","id":4,"result":{"prompts":[]}}
 ```
 > mcp_traffic.log 28-65行
+
 ![call](./.images/call.png)
 
 ### 3. 工具调用阶段
@@ -80,6 +82,7 @@ sequenceDiagram
     L->>H: {"jsonrpc":"2.0","id":5,"result":{"content":[{"type":"text","text":"\n            Tonight:\n            Temperature: 44°F\n            Wind: 7 to 16 mph N\n            Forecast: Clear, with a low around 44. North wind 7 to 16 mph.\n            \n---\n\n            Sunday:\n            Temperature: 56°F\n            Wind: 6 to 13 mph E\n            Forecast: Mostly sunny. High near 56, with temperatures falling to around 53 in the afternoon. East wind 6 to 13 mph, with gusts as high as 24 mph.\n            \n---\n\n            Sunday Night:\n            Temperature: 51°F\n            Wind: 13 mph S\n            Forecast: Mostly cloudy. Low around 51, with temperatures rising to around 53 overnight. South wind around 13 mph, with gusts as high as 23 mph.\n            \n---\n\n            Monday:\n            Temperature: 76°F\n            Wind: 10 to 22 mph SW\n            Forecast: Partly sunny. High near 76, with temperatures falling to around 74 in the afternoon. Southwest wind 10 to 22 mph, with gusts as high as 38 mph.\n            \n---\n\n            Monday Night:\n            Temperature: 61°F\n            Wind: 8 to 21 mph SW\n            Forecast: A slight chance of rain showers between 8pm and 2am. Mostly cloudy. Low around 61, with temperatures rising to around 65 overnight. Southwest wind 8 to 21 mph, with gusts as high as 37 mph. Chance of precipitation is 20%.\n            "}],"structuredContent":{"result":"\n            Tonight:\n            Temperature: 44°F\n            Wind: 7 to 16 mph N\n            Forecast: Clear, with a low around 44. North wind 7 to 16 mph.\n            \n---\n\n            Sunday:\n            Temperature: 56°F\n            Wind: 6 to 13 mph Host E\n            Forecast: Mostly sunny. High near 56, with temperatures falling to around 53 in the afternoon. East wind 6 to 13 mph, with gusts as high as 24 mph.\n            \n---\n\n            Sunday Night:\n            Temperature: 51°F\n            Wind: 13 mph S\n            Forecast: Mostly cloudy. Low around 51, with temperatures rising to around 53 overnight. South wind around 13 mph, with gusts as high as 23 mph.\n            \n---\n\n            Monday:\n            Temperature: 76°F\n            Wind: 10 to 22 mph SW\n            Forecast: Partly sunny. High near 76, with temperatures falling to around 74 in the afternoon. Southwest wind 10 to 22 mph, with gusts as high as 38 mph.\n            \n---\n\n            Monday Night:\n            Temperature: 61°F\n            Wind: 8 to 21 mph SW\n            Forecast: A slight chance of rain showers between 8pm and 2am. Mostly cloudy. Low around 61, with temperatures rising to around 65 overnight. Southwest wind 8 to 21 mph, with gusts as high as 37 mph. Chance of precipitation is 20%.\n            "},"isError":false}}
 ```
 > mcp_traffic.log 75-82行
+
 ![call](./.images/call.png)
 
 ## 数据流说明
