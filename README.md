@@ -54,6 +54,17 @@ python3 /ABSOLUTE/PATH/TO/PARENT/FOLDER/weather/mcp_logger.py \
 3. 接收 Server 返回给 Host 的 stdout 消息
 4. 全量记录双向消息（含时间戳）到 `mcp_traffic.log`
 
+### 整体架构图
+
+```mermaid
+graph TD
+    A[MCP Host] -->|①JSON-RPC请求| B[mcp_logger.py]
+    B -->|②转发请求| C[MCP Server<br/>weather.py]
+    C -->|③JSON-RPC响应| B
+    B -->|④转发响应| A
+    B -->|记录日志| D[mcp_traffic.log]
+```
+
 ### 交互流程图
 
 我们提供了详细的交互流程图，展示了 MCP Host 与 MCP Server 之间的完整交互过程：
