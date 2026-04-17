@@ -44,7 +44,7 @@ sequenceDiagram
     H->>L: {"method":"tools/list","jsonrpc":"2.0","id":1}
     L->>S: 转发tools/list请求
     S->>L: 返回工具列表
-    L->>H: {"jsonrpc":"2.0","id":1,"result":{"tools":[{"name":"get_alerts","description":"Get weather alerts for a US state.\n\nArgs:\n    state: Two-letter US state code (e.g. CA, NY)\n","inputSchema":{"properties":{"state":{"title":"State","type":"string"}},"required":["state"],"title":"get_alertsArguments","type":"object"},"outputSchema":{"properties":{"result":{"title":"Result","type":"string"}},"required":["result"],"title":"get_alertsOutput","type":"object"}},{"name":"get_forecast","description":"Get weather forecast for a location.\n\nArgs:\n    latitude: Latitude of the location\n    longitude: Longitude of the location\n","inputSchema":{"properties":{"latitude":{"title":"Latitude","type":"number"},"longitude":{"title":"Longitude","type":"number"}},"required":["latitude","longitude"]}}}}
+    L->>H: {"jsonrpc":"2.0","id":1,"result":{"tools":[{"name":"get_alerts","description":"Get weather alerts for a US state.\n\n ..... }}
     
     H->>L: {"method":"resources/list","jsonrpc":"2.0","id":2}
     L->>S: 转发resources/list请求
@@ -61,7 +61,7 @@ sequenceDiagram
     S->>L: 返回提示词列表
     L->>H: {"jsonrpc":"2.0","id":4,"result":{"prompts":[]}}
 ```
-> mcp_traffic.log 28-65行
+> mcp_traffic.log 28-65行，因文本较长，部分省略
 
 ![call](./.images/call.png)
 
@@ -79,9 +79,9 @@ sequenceDiagram
     S->>API: 请求天气数据 (NWS API)
     API->>S: 返回JSON格式的天气数据
     S->>L: 返回工具调用结果
-    L->>H: {"jsonrpc":"2.0","id":5,"result":{"content":[{"type":"text","text":"\n            Tonight:\n            Temperature: 44°F\n            Wind: 7 to 16 mph N\n            Forecast: Clear, with a low around 44. North wind 7 to 16 mph.\n            \n---\n\n            Sunday:\n            Temperature: 56°F\n            Wind: 6 to 13 mph E\n            Forecast: Mostly sunny. High near 56, with temperatures falling to around 53 in the afternoon. East wind 6 to 13 mph, with gusts as high as 24 mph.\n            \n---\n\n            Sunday Night:\n            Temperature: 51°F\n            Wind: 13 mph S\n            Forecast: Mostly cloudy. Low around 51, with temperatures rising to around 53 overnight. South wind around 13 mph, with gusts as high as 23 mph.\n            \n---\n\n            Monday:\n            Temperature: 76°F\n            Wind: 10 to 22 mph SW\n            Forecast: Partly sunny. High near 76, with temperatures falling to around 74 in the afternoon. Southwest wind 10 to 22 mph, with gusts as high as 38 mph.\n            \n---\n\n            Monday Night:\n            Temperature: 61°F\n            Wind: 8 to 21 mph SW\n            Forecast: A slight chance of rain showers between 8pm and 2am. Mostly cloudy. Low around 61, with temperatures rising to around 65 overnight. Southwest wind 8 to 21 mph, with gusts as high as 37 mph. Chance of precipitation is 20%.\n            "}],"structuredContent":{"result":"\n            Tonight:\n            Temperature: 44°F\n            Wind: 7 to 16 mph N\n            Forecast: Clear, with a low around 44. North wind 7 to 16 mph.\n            \n---\n\n            Sunday:\n            Temperature: 56°F\n            Wind: 6 to 13 mph Host E\n            Forecast: Mostly sunny. High near 56, with temperatures falling to around 53 in the afternoon. East wind 6 to 13 mph, with gusts as high as 24 mph.\n            \n---\n\n            Sunday Night:\n            Temperature: 51°F\n            Wind: 13 mph S\n            Forecast: Mostly cloudy. Low around 51, with temperatures rising to around 53 overnight. South wind around 13 mph, with gusts as high as 23 mph.\n            \n---\n\n            Monday:\n            Temperature: 76°F\n            Wind: 10 to 22 mph SW\n            Forecast: Partly sunny. High near 76, with temperatures falling to around 74 in the afternoon. Southwest wind 10 to 22 mph, with gusts as high as 38 mph.\n            \n---\n\n            Monday Night:\n            Temperature: 61°F\n            Wind: 8 to 21 mph SW\n            Forecast: A slight chance of rain showers between 8pm and 2am. Mostly cloudy. Low around 61, with temperatures rising to around 65 overnight. Southwest wind 8 to 21 mph, with gusts as high as 37 mph. Chance of precipitation is 20%.\n            "},"isError":false}}
+    L->>H: {"jsonrpc":"2.0","id":5,"result":{"content":[{"type":"text","text":"\n            Tonight:\n            Temperature: 44°F\n  ......  "},"isError":false}}
 ```
-> mcp_traffic.log 75-82行
+> mcp_traffic.log 75-82行，因文本较长，部分省略
 
 ![call](./.images/call.png)
 
