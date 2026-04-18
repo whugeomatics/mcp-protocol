@@ -24,12 +24,12 @@ sequenceDiagram
     H->>L: {"method":"initialize","params":{"protocolVersion":"2025-11-25","capabilities":{},"clientInfo":{"name":"Cline","version":"3.78.0"}},"jsonrpc":"2.0","id":0}
     L->>S: 转发initialize请求
     S->>L: 返回初始化结果
-    L->>H: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2025-11-25","capabilities":{"experimental":{},"prompts":{"listChanged":false},"resources":{"subscribe":false,"listChanged":false},"tools":{"listChanged":false}},"serverInfo":{"name":"weather","version":"1.27.0"}}}
+    L->>H: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2025-11-25","capabilities":{"experimental":{} .....},"tools":{"listChanged":false}},"serverInfo":{"name":"weather","version":"1.27.0"}}}
     
     H->>L: {"method":"notifications/initialized","jsonrpc":"2.0"}
     L->>S: 转notifications/initialized通知
 ```
-> mcp_traffic.log 13-25行
+> mcp_traffic.log 13-25行, 因文本较长，部分省略
 
 ![初始化](./.images/init.png)
 
@@ -79,7 +79,7 @@ sequenceDiagram
     S->>API: 请求天气数据 (NWS API)
     API->>S: 返回JSON格式的天气数据
     S->>L: 返回工具调用结果
-    L->>H: {"jsonrpc":"2.0","id":5,"result":{"content":[{"type":"text","text":"\n            Tonight:\n            Temperature: 44°F\n  ......  "},"isError":false}}
+    L->>H: {"jsonrpc":"2.0","id":5,"result":{"content":[{"type":"text","text":"Temperature: 44°F\n  ......  "},"isError":false}}
 ```
 > mcp_traffic.log 75-82行，因文本较长，部分省略
 
@@ -108,4 +108,4 @@ sequenceDiagram
 - 时间戳
 - 传输方向（HOST -> SERVER 或 SERVER -> HOST）
 - 完整的JSON-RPC协议消息内容
-- 错误信息（如有）
+- 错误信息

@@ -69,7 +69,7 @@ graph TD
 
 我们提供了详细的交互流程图，展示了 MCP Host 与 MCP Server 之间的完整交互过程：
 
-- [查看详细交互流程图](mcp_interaction_flow.md)
+- [查看详细交互流程图](MCP_INTERACTION_FLOW.md)
 
 主要交互阶段包括：
 
@@ -140,7 +140,7 @@ uv sync
 2. 在 Host 中调用 `get_alerts`、`get_forecast` 等工具。
 3. 打开 `mcp_traffic.log` 观察完整的 **JSON-RPC** 往返过程。
 4. 重点关注 initialize、tools/list、tools/call 等请求与响应结构。
-5. 参考 [交互流程图](mcp_interaction_flow.md) 了解完整的交互过程。
+5. 参考 [交互流程图](MCP_INTERACTION_FLOW.md) 了解完整的交互过程。
 
 通过这个流程，你可以直观看到 MCP Host 与 MCP Server 的协议交互细节。
 
@@ -166,3 +166,13 @@ uv sync
 **工具调用响应**：
 ```json
 {"jsonrpc":"2.0","id":5,"result":{"content":[{"type":"text","text":"...天气预报数据..."}],"structuredContent":{"result":"..."},"isError":false}}
+```
+---
+
+## 环境要求
+- Python >= 3.8（推荐 3.11+）
+- httpx >= 0.28.1
+- mcp[cli] >= 1.27.0
+
+## 许可证
+本仓库使用MIT许可证，详情请查看[LICENSE](LICENSE)文件。
