@@ -108,4 +108,3 @@ sequenceDiagram
 - 时间戳
 - 传输方向（HOST -> SERVER 或 SERVER -> HOST）
 - 完整的JSON-RPC协议消息内容
-- 错误信息
