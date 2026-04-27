@@ -27,7 +27,7 @@ mcp-protocol/
 ├── mcp_logger.py      # MCP 通信中转与日志记录代理
 ├── mcp_traffic.log    # 运行后生成/追加的通信日志
 ├── mcp_interaction_flow.md  # MCP Host与Server交互流程图
-└── requirement.txt    # 依赖列表
+└── requirements.txt    # 依赖列表
 ```
 
 ---
@@ -129,7 +129,7 @@ pip install -r requirements.txt
 或（推荐，使用 uv）：
 
 ```bash
-uv sync
+uv pip install -r requirements.txt
 ```
 
 ---
